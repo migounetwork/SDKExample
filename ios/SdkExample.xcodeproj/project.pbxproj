@@ -280,7 +280,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#set -e\ncase \"$CONFIGURATION\" in\n  *)\n    ../scripts/bundle-sdk.sh\n    ;;\nesac\n";
+			shellScript = "#set -e\ncase \"$CONFIGURATION\" in\n  *)\n    export NODE_BINARY=node\n    ../node_modules/react-native/scripts/react-native-xcode.sh\n    ../scripts/bundle-sdk.sh\n    ;;\nesac\n";
 		};
 		3C5911D24359EED13A64DBF1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
