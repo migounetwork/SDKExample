@@ -64,9 +64,11 @@ sudo gem install cocoapods
 > npx react-native-rename "新包名"
 > pod install --project-directory=ios
 ```
-> 注意：新包名会统一替换file、folder以及源码内容，才不会都以SDExample做路径和档名。跑完请重载xcode，如果已安装pod，需要再重新跑pod install才能顺利运行。
+> 注意：
+> 1. 新包名会统一替换file、folder以及源码内容，才不会都以SDExample做路径和档名。
+> 2. 跑完请重载xcode。
+> 3. 如果已安装pod，需要再重新跑pod install才能顺利运行。
 
-<br>
 <br>
 
 
@@ -122,4 +124,7 @@ RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launc
 export EXT_NAME="我的外部新包" ## 白包view controller name
 ```
 
-> 注意：`RNNCustomViewController.h` 是事先准备好的白包示例，请在`AppDelegate.m` 替换成其它白包的view controller
+> 注意：
+> 1. `RNNCustomViewController.h` 是事先准备好的白包示例，请在`AppDelegate.m` 替换成其它白包的view controller
+> 2. 可以自行更动 "我的外部新包" ，但请确认在 `AppDelegate.m` 和 `.env.production` 里边是一致如上示例
+> 3. 正确启动在模拟器，要跑出内键自带的白包 `RNNCustomViewController.h` 的 View
