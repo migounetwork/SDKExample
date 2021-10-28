@@ -81,29 +81,10 @@ export IOS_VER_CODE="1"
 export IOS_VER_MAJOR="1.0"
 export EXT_NAME="我的外部新包" ## 白包view controller name
 ```
-> 注意：不要用Xcode改变app名和bundle identifier包括版号，请一律使用 `.env.production` 来设置
-<br>
-
-Usage 1: Use pre-defined `API_URL` variables which declared in `.env.production` for Obj-C classes like:
-```objc
-// import header
-#import "ReactNativeConfig.h"
-
-// then read individual keys like:
-NSString *apiUrl = [ReactNativeConfig envFor:@"API_URL"];
-
-// or just fetch the whole config
-NSDictionary *config = [ReactNativeConfig env];
-```
-
-<br>
-
-Usage 2: Use pre-defined `APP_ID_IOS` variables declared in `.env.production` for Info.plist like:
-```plist
-<key>CFBundleIdentifier</key>
-<string>$(APP_ID_IOS)</string>
-```
-
+> 注意：
+> 1. .env.production是隐藏文档，你先开启macos隐藏文档才能在xcode里看到。
+> 2. 不要用Xcode改变app名和bundle identifier包括版号，请一律使用 `.env.production` 来设置
+> 3. 设置完后，每次run/build/archive都会自动引入到Info.plist
 <br>
 
 # 4. Unpack SDK bundle
@@ -138,7 +119,7 @@ RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launc
 ```
 ### Setup registered component name `RNNCustomComponent` to the first entry point in `.env.production`:
 ```sh
-export EXT_NAME="RNNCustomComponent" ## 白包view controller name
+export EXT_NAME="我的外部新包" ## 白包view controller name
 ```
 
 > 注意：`RNNCustomViewController.h` 是事先准备好的白包示例，请在`AppDelegate.m` 替换成其它白包的view controller
