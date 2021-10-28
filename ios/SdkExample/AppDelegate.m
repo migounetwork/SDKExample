@@ -68,7 +68,7 @@ static void InitializeFlipper(UIApplication *application) {
   
   // define custom view controller name "RNNCustomComponent" which could be setup in .env.production for showup in the first screen
   [ReactNativeNavigation
-    registerExternalComponent:@"RNNCustomComponent"
+    registerExternalComponent:@"我的外部新包"
       callback:^UIViewController *(NSDictionary *props, RCTBridge *bridge) {
         return [[RNNCustomViewController alloc] initWithProps:props];
       }];

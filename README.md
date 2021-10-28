@@ -57,11 +57,14 @@ sudo gem install cocoapods
 
 # 2. Install project dependency and rename project
 ```sh
+> git clone https://github.com/migounetwork/SDKExample.git SDKExample
+> cd SDKExample
 > sudo npm install -g yarn
 > yarn install
+> npx react-native-rename "新包名"
 > pod install --project-directory=ios
-> npx react-native-rename "${新包名}"
 ```
+> 注意：新包名会统一替换file、folder以及源码内容，才不会都以SDExample做路径和档名。跑完请重载xcode，如果已安装pod，需要再重新跑pod install才能顺利运行。
 
 <br>
 <br>
@@ -76,7 +79,7 @@ export APP_ID_IOS="com.sdkExample"
 export APP_NAME="SDK Example"
 export IOS_VER_CODE="1"
 export IOS_VER_MAJOR="1.0"
-export EXT_NAME="RNNCustomComponent" ## 白包view controller name
+export EXT_NAME="我的外部新包" ## 白包view controller name
 ```
 > 注意：不要用Xcode改变app名和bundle identifier包括版号，请一律使用 `.env.production` 来设置
 <br>
@@ -129,8 +132,8 @@ Usage 2: Use pre-defined `APP_ID_IOS` variables declared in `.env.production` fo
 ```objc
 RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
 [ReactNativeNavigation bootstrapWithBridge:bridge];
-[ReactNativeNavigation registerExternalComponent:@"RNNCustomComponent" callback:^UIViewController *(NSDictionary *props, RCTBridge *bridge) {
-    return [[ExternalViewController alloc] initWithProps:props];
+[ReactNativeNavigation registerExternalComponent:@"我的外部新包" callback:^UIViewController *(NSDictionary *props, RCTBridge *bridge) {
+    return [[RNNCustomViewController alloc] initWithProps:props];
 }];
 ```
 ### Setup registered component name `RNNCustomComponent` to the first entry point in `.env.production`:
@@ -138,4 +141,4 @@ RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launc
 export EXT_NAME="RNNCustomComponent" ## 白包view controller name
 ```
 
-> 注意：`RNNCustomViewController.h` 是事先准备好的白包示例，请在`AppDelegate.m` 替换成其它白包的view controller
+> 注意：`RNNCustomViewController.h` 是事先准备好的白包示例，请在`AppDelegate.m` 替换成其它白包的view controller
