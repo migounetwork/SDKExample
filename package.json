@@ -22,7 +22,7 @@
     "lodash": "4.17.20",
     "native-base": "^2.15.2",
     "react": "17.0.2",
-    "react-native": "0.66.0",
+    "react-native": "0.66.4",
     "react-native-airplay-btn": "^1.1.0",
     "react-native-config": "~1.4.4",
     "react-native-device-info": "^8.4.0",
