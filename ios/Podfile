@@ -30,5 +30,16 @@ target 'SdkExample' do
   post_install do |installer|
     react_native_post_install(installer)
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
+
+    ## Workaround for fix clockid_t redefinition issue
+    ##    https://github.com/facebook/flipper/issues/834
+    installer.pods_project.targets.each do |target|
+      case target.name
+      when 'RCT-Folly'
+        target.build_configurations.each do |config|
+          config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+        end
+      end
+    end
   end
 end
