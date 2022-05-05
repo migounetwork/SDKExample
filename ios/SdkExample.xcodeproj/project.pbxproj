@@ -18,6 +18,7 @@
 		D31969EE270EF1E000CCBED7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31969EC270EF1E000CCBED7 /* Launch Screen.storyboard */; };
 		D32ECA16271E0B9D006FD917 /* RNNCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D32ECA12271E0B9C006FD917 /* RNNCustomViewController.m */; };
 		D32ECA17271E0B9D006FD917 /* RNNNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D32ECA13271E0B9C006FD917 /* RNNNativeViewController.m */; };
+		D36B96EF282405BF001A5B93 /* LinkPresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36B96EE282405BF001A5B93 /* LinkPresentation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E834990FAF22404E2270E835 /* libPods-SdkExample-SdkExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF7320B0762DE94381685C2 /* libPods-SdkExample-SdkExampleTests.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		D32ECA13271E0B9C006FD917 /* RNNNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNNNativeViewController.m; path = SdkExample/RNNNativeViewController.m; sourceTree = "<group>"; };
 		D32ECA14271E0B9C006FD917 /* RNNCustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNNCustomViewController.h; path = SdkExample/RNNCustomViewController.h; sourceTree = "<group>"; };
 		D32ECA15271E0B9C006FD917 /* RNNNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNNNativeViewController.h; path = SdkExample/RNNNativeViewController.h; sourceTree = "<group>"; };
+		D36B96EE282405BF001A5B93 /* LinkPresentation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LinkPresentation.framework; path = System/Library/Frameworks/LinkPresentation.framework; sourceTree = SDKROOT; };
 		ECB36E43AAA6125E84634829 /* Pods-SdkExample-SdkExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SdkExample-SdkExampleTests.release.xcconfig"; path = "Target Support Files/Pods-SdkExample-SdkExampleTests/Pods-SdkExample-SdkExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36B96EF282405BF001A5B93 /* LinkPresentation.framework in Frameworks */,
 				727FE1706E08B8A2FF152E88 /* libPods-SdkExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +115,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D36B96EE282405BF001A5B93 /* LinkPresentation.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				CB1695DA59B467C297D51A47 /* libPods-SdkExample.a */,
 				2BF7320B0762DE94381685C2 /* libPods-SdkExample-SdkExampleTests.a */,
