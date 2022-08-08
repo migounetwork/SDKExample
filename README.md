@@ -62,6 +62,7 @@ sudo gem install cocoapods
 > sudo npm install -g yarn
 > yarn install
 > npx react-native-rename "新包名"
+> pod update --project-directory=ios
 > pod install --project-directory=ios
 ```
 > 注意：
