@@ -13,7 +13,7 @@ target 'SdkExample' do
   )
 
   ## For react native permission
-  permissions_path = '../node_modules/react-native-permissions/ios'
+  # permissions_path = '../node_modules/react-native-permissions/ios'
   # pod 'Permission-PhotoLibraryAddOnly', :path => "#{permissions_path}/PhotoLibraryAddOnly"
   # pod 'Permission-AppTrackingTransparency', :path => "#{permissions_path}/AppTrackingTransparency"
 
