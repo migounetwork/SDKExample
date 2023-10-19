@@ -22,7 +22,7 @@ This is a react-native template which include 3 main dependency:
 ### We recommend installing Node and Watchman using Homebrew. Run the following commands in a Terminal after installing Homebrew:
 
 ```sh
-> brew install node  
+> brew install node
 > brew install watchman
 ```
 
@@ -60,15 +60,17 @@ sudo gem install cocoapods
 > git clone https://github.com/migounetwork/SDKExample.git SDKExample
 > cd SDKExample
 > sudo npm install -g yarn
+> sudo npm install -g react-native-rename@2.9.0
 > yarn install
 > npx react-native-rename "新包名"
 > pod update --project-directory=ios
 > pod install --project-directory=ios
 ```
 > 注意：
-> 1. 新包名会统一替换file、folder以及源码内容，才不会都以SDExample做路径和档名。
-> 2. 跑完请重载xcode。
-> 3. 如果已安装pod，需要再重新跑pod install才能顺利运行。
+> 1. 如果rename新包名失败，请确定rename的版号是2.9.0并重新跑一次 `sudo npm install -g react-native-rename@2.9.0`
+> 2. 新包名会统一替换file、folder以及源码内容，才不会都以SDExample做路径和档名。
+> 3. 跑完请重载xcode。
+> 4. 如果已安装pod，需要再重新跑pod install才能顺利运行。
 
 <br>
 
