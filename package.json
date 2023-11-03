@@ -6,6 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "postinstall": "patch-package",
     "test": "jest",
     "lint": "eslint ."
   },
@@ -64,6 +65,7 @@
     "eslint": "^7.32.0",
     "jest": "^27.2.4",
     "metro-react-native-babel-preset": "^0.66.2",
+    "patch-package": "^8.0.0",
     "react-native-flipper": "0.103.0",
     "react-test-renderer": "17.0.2",
     "redux-flipper": "1.4.2",
